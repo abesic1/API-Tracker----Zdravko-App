@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pregled zdravstvenih ustanova na karti. Pronađite najbliže zdravstvene ustanove u Zagrebu.">
+    <meta name="keywords" content="zdravstvene ustanove, karta, zagreb, bolnice, klinike">
+    <meta name="author" content="Zdravko Tim - Veleučilište u Rijeci">
+    <title>Ustanove - Zdravko</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
+    
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        #map { 
+            height: 600px; 
+            width: 100%; 
+            border-radius: 12px; 
+            box-shadow: var(--shadow-md);
+            margin: 2rem 0;
+        }
+        .leaflet-popup-content-wrapper {
+            border-radius: 8px;
+        }
+        .leaflet-popup-content {
+            font-family: var(--font-family);
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Preskoči na sadržaj</a>
+    
+    <!-- Navigacija -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo123.png" alt="Zdravko logo" style="width: 55px; height: 50px; margin-right: 0.5rem;">
+                <span>Zdravko</span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <div class="nav-item">
+                    <a href="index.html" class="nav-link">Početna</a>
+                </div>
+                <div class="nav-item">
+                    <a href="usluge.html" class="nav-link">Usluge</a>
+                    <div class="dropdown">
+                        <a href="usluge.html#pacijenti" class="dropdown-item">Za pacijente</a>
+                        <a href="usluge.html#lijecnici" class="dropdown-item">Za liječnike</a>
+                        <a href="usluge.html#ustanove" class="dropdown-item">Za ustanove</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="mapa.html" class="nav-link">Ustanove</a>
+                </div>
+                <div class="nav-item">
+                    <a href="kontakt.html" class="nav-link">Kontakt</a>
+                </div>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main content -->
+    <main id="main-content">
+        <!-- Hero sekcija -->
+        <section class="hero" style="min-height: 40vh;">
+            <div class="container hero-content">
+                <h1 class="hero-title" style="font-size: 2.5rem;">Zdravstvene ustanove</h1>
+                <p class="hero-subtitle">Pronađite najbliže zdravstvene ustanove na karti</p>
+            </div>
+        </section>
+        
+        <!-- Map sekcija -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <p class="section-description">
+                        Interaktivna karta koja prikazuje sve zdravstvene ustanove u Zagrebu s detaljnim informacijama.
+                    </p>
+                </div>
+                
+                <div class="fade-in">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-heartbeat"></i> Zdravko</h3>
+                    <p>Digitalna platforma za modernizaciju hrvatskog zdravstvenog sustava. Razvijeno na Veleučilištu u Rijeci.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Brzi linkovi</h3>
+                    <p><a href="index.html">Početna</a></p>
+                    <p><a href="usluge.html">Usluge</a></p>
+                    <p><a href="mapa.html">Ustanove</a></p>
+                    <p><a href="kontakt.html">Kontakt</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:abesic@veleri.hr">abesic@veleri.hr</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Rijeka, Hrvatska</p>
+                    <p><i class="fas fa-university"></i> Veleučilište u Rijeci</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Pratite nas</h3>
+                    <p>
+                        <a href="#" style="margin-right: 1rem;"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
+                        <a href="#" style="margin-right: 1rem;"><i class="fab fa-instagram"></i> Instagram</a><br>
+                        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zdravko. Sva prava pridržana. | Razvijeno na Veleučilištu u Rijeci</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+    
+    <!-- Accesibility Widget -->
+    <script src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js" defer></script>
+    
+    <script>
+        // Map functionality from original mapa.html
+        const map = L.map('map').setView([45.815, 15.982], 12);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        async function ucitajUstanove() {
+            try {
+                const response = await fetch('http://localhost:3000/ustanove');
+                const ustanove = await response.json();
+                
+                ustanove.forEach(ustanova => {
+                    const lat = parseFloat(ustanova.Y);
+                    const lng = parseFloat(ustanova.X);
+                    if (!isNaN(lat) && !isNaN(lng)) {
+                        const popupText = `
+                            <b>${ustanova.naziv}</b><br>
+                            ${ustanova.adresa}<br>
+                            Tel: ${ustanova.telefon}<br>
+                            ${ustanova.email ? `Email: ${ustanova.email}<br>` : ''}
+                            ${ustanova.web ? `<a href="${ustanova.web}" target="_blank">Web</a>` : ''}
+                        `;
+                        L.marker([lat, lng])
+                            .addTo(map)
+                            .bindPopup(popupText);
+                    }
+                });
+            } catch (error) {
+                console.error('Greška pri učitavanju ustanova:', error);
+            }
+        }
+        
+        // Load institutions when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            ucitajUstanove();
+        });
+    </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Zdravstvene ustanove Zagreb</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        #map { height: 600px; width: 100%; }
+        .info { padding: 6px 8px; font: 14px Arial; background: white; }
+    </style>
+</head>
+<body>
+    <h1>Zdravstvene ustanove u Zagrebu</h1>
+    <div id="map"></div>
+
+    <script>
+        const map = L.map('map').setView([45.815, 15.982], 12);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        async function ucitajUstanove() {
+            const response = await fetch('http://localhost:3000/ustanove');
+            const ustanove = await response.json();
+            
+            ustanove.forEach(ustanova => {
+                const lat = parseFloat(ustanova.Y);
+                const lng = parseFloat(ustanova.X);
+                const popupText = `
+                    <b>${ustanova.naziv}</b><br>
+                    ${ustanova.adresa}<br>
+                    Tel: ${ustanova.telefon}<br>
+                    ${ustanova.email ? `Email: ${ustanova.email}` : ''}<br>
+                    ${ustanova.web ? `<a href="${ustanova.web}">Web</a>` : ''}
+                `;
+                L.marker([lat, lng])
+                    .addTo(map)
+                    .bindPopup(popupText);
+            });
+        }
+        ucitajUstanove();
+    </script>
+</body>
+</html>
+-->

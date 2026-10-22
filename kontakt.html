@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontaktirajte Zdravko tim. Informacije o članovima tima, kontakt forma i najčešća pitanja.">
+    <meta name="keywords" content="zdravko kontakt, tim, veleučilište rijeka, kontakt forma">
+    <meta name="author" content="Zdravko Tim - Veleučilište u Rijeci">
+    <title>Kontakt - Zdravko</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
+    
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Preskoči na sadržaj</a>
+    
+    <!-- Navigacija -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo123.png" alt="Zdravko logo" style="width: 55px; height: 50px; margin-right: 0.5rem;">
+                <span>Zdravko</span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <div class="nav-item">
+                    <a href="index.html" class="nav-link">Početna</a>
+                </div>
+                <div class="nav-item">
+                    <a href="usluge.html" class="nav-link">Usluge</a>
+                    <div class="dropdown">
+                        <a href="usluge.html#pacijenti" class="dropdown-item">Za pacijente</a>
+                        <a href="usluge.html#lijecnici" class="dropdown-item">Za liječnike</a>
+                        <a href="usluge.html#ustanove" class="dropdown-item">Za ustanove</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="mapa.html" class="nav-link">Ustanove</a>
+                </div>
+                <div class="nav-item">
+                    <a href="kontakt.html" class="nav-link">Kontakt</a>
+                </div>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main content -->
+    <main id="main-content">
+        <!-- Hero sekcija -->
+        <section class="hero" style="min-height: 40vh;">
+            <div class="container hero-content">
+                <h1 class="hero-title" style="font-size: 2.5rem;">Kontaktirajte nas</h1>
+                <p class="hero-subtitle">Rado ćemo odgovoriti na sva vaša pitanja</p>
+            </div>
+        </section>
+        
+        <!-- Kontakt informacije -->
+        <section class="section">
+            <div class="container">
+                <div class="grid grid-2" style="align-items: start; gap: 3rem;">
+                    <!-- Kontakt forma -->
+                    <div class="fade-in">
+                        <h2 style="font-size: 2rem; color: var(--dark-gray); margin-bottom: 1rem;">Pošaljite upit</h2>
+                        <p style="color: var(--medium-gray); margin-bottom: 2rem;">
+                            Ispunite formu i kontaktirat ćemo vas u najkraćem mogućem roku.
+                        </p>
+                        
+                        <form class="contact-form" id="contact-form" onsubmit="submitContactForm(event)">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Ime i prezime *</label>
+                                <input type="text" id="name" name="name" class="form-input" required 
+                                       placeholder="Unesite vaše ime i prezime">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email adresa *</label>
+                                <input type="email" id="email" name="email" class="form-input" required 
+                                       placeholder="Unesite vašu email adresu">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Broj telefona</label>
+                                <input type="tel" id="phone" name="phone" class="form-input" 
+                                       placeholder="Unesite vaš broj telefona (nije obavezno)">
+                            </div>
+                        
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Poruka *</label>
+                                <textarea id="message" name="message" class="form-textarea" required 
+                                          placeholder="Ovdje napišite vašu poruku..."></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: var(--medium-gray);">
+                                    <input type="checkbox" required style="width: auto;">
+                                    Prihvaćam <a href="#" onclick="showPrivacyAlert()" style="color: var(--primary-blue);">uvjete korištenja i politiku privatnosti</a> *
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.125rem;">
+                                <i class="fas fa-paper-plane"></i> Pošalji poruku
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Kontakt informacije -->
+                    <div class="fade-in">
+                        <h2 style="font-size: 2rem; color: var(--dark-gray); margin-bottom: 1rem;">Informacije</h2>
+                        <p style="color: var(--medium-gray); margin-bottom: 2rem;">
+                            Zdravko tim je dio projekta na Veleučilištu u Rijeci.
+                        </p>
+                        
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">
+                                <i class="fas fa-map-marker-alt"></i> Adresa
+                            </h3>
+                            <p style="color: var(--medium-gray); line-height: 1.6;">
+                                Veleučilište u Rijeci<br>
+                                Poslovni odjel<br>
+                                Preddiplomski stručni studij Informatika<br>
+                                Rijeka, Hrvatska
+                            </p>
+                        </div>
+                        
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">
+                                <i class="fas fa-envelope"></i> Email
+                            </h3>
+                            <p style="color: var(--medium-gray);">
+                                <a href="mailto:abesic@veleri.hr" style="color: var(--primary-blue); text-decoration: underline;">
+                                    abesic@veleri.hr
+                                </a>
+                            </p>
+                        </div>
+                        
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">
+                                <i class="fas fa-clock"></i> Radno vrijeme
+                            </h3>
+                            <p style="color: var(--medium-gray); line-height: 1.6;">
+                                Aplikacija dostupna 24/7<br>
+                                Korisnička podrška: Radnim danom 9:00 - 17:00
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">
+                                <i class="fas fa-share-alt"></i> Društvene mreže
+                            </h3>
+                            <div style="display: flex; gap: 1rem;">
+                                <a href="#" class="btn btn-secondary" style="border-color: var(--primary-blue); color: var(--primary-blue); padding: 0.75rem 1rem;">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="btn btn-secondary" style="border-color: var(--primary-blue); color: var(--primary-blue); padding: 0.75rem 1rem;">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="btn btn-secondary" style="border-color: var(--primary-blue); color: var(--primary-blue); padding: 0.75rem 1rem;">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+      
+        
+        <!-- FAQ -->
+        <section class="section section-light">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Najčešća pitanja</h2>
+                    <p class="section-description">
+                        Odgovori na najčešće postavljena pitanja o aplikaciji Zdravko.
+                    </p>
+                </div>
+                
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="card fade-in" style="margin-bottom: 1rem;">
+                        <h3 style="color: var(--primary-blue); cursor: pointer;" onclick="toggleFAQ(1)">
+                            <i class="fas fa-question-circle"></i> Je li Zdravko besplatan?
+                            <i class="fas fa-chevron-down" id="faq-icon-1" style="float: right; transition: transform 0.3s;"></i>
+                        </h3>
+                        <div id="faq-content-1" style="display: none; margin-top: 1rem; color: var(--medium-gray); line-height: 1.6;">
+                            Da, osnovna verzija Zdravko aplikacije potpuno je besplatna za sve korisnike. 
+                            Financira se iz javnih izvora (državni proračun, HZZO, EU fondovi). 
+                        </div>
+                    </div>
+                    
+                    <div class="card fade-in" style="margin-bottom: 1rem;">
+                        <h3 style="color: var(--primary-blue); cursor: pointer;" onclick="toggleFAQ(2)">
+                            <i class="fas fa-question-circle"></i> Kako je zaštičena moja privatnost?
+                            <i class="fas fa-chevron-down" id="faq-icon-2" style="float: right; transition: transform 0.3s;"></i>
+                        </h3>
+                        <div id="faq-content-2" style="display: none; margin-top: 1rem; color: var(--medium-gray); line-height: 1.6;">
+                            Zdravko koristi najviše standarde sigurnosti u skladu s GDPR-om. Svi podaci su enkriptirani, 
+                            koristimo dvofaktorsku autentifikaciju i redovito radimo sigurnosne kopije. 
+                            Vaši podaci su dostupni samo vama i vašem liječniku.
+                        </div>
+                    </div>
+                    
+                    <div class="card fade-in" style="margin-bottom: 1rem;">
+                        <h3 style="color: var(--primary-blue); cursor: pointer;" onclick="toggleFAQ(3)">
+                            <i class="fas fa-question-circle"></i> Kada će aplikacija biti dostupna?
+                            <i class="fas fa-chevron-down" id="faq-icon-3" style="float: right; transition: transform 0.3s;"></i>
+                        </h3>
+                        <div id="faq-content-3" style="display: none; margin-top: 1rem; color: var(--medium-gray); line-height: 1.6;">
+                            Aplikacija je trenutno u fazi razvoja i testiranja.
+                        </div>
+                    </div>
+                    
+                    <div class="card fade-in" style="margin-bottom: 1rem;">
+                        <h3 style="color: var(--primary-blue); cursor: pointer;" onclick="toggleFAQ(4)">
+                            <i class="fas fa-question-circle"></i> Hoće li raditi s mojim liječnikom?
+                            <i class="fas fa-chevron-down" id="faq-icon-4" style="float: right; transition: transform 0.3s;"></i>
+                        </h3>
+                        <div id="faq-content-4" style="display: none; margin-top: 1rem; color: var(--medium-gray); line-height: 1.6;">
+                            Zdravko je dizajniran za integraciju s cijelim hrvatskim zdravstvenim sustavom, 
+                            uključujući sve javne i privatne ordinacije. Radimo na tome da uključimo što više liječnika 
+                            i ustanova pri lansiranju aplikacije.
+                        </div>
+                    </div>
+                    
+                    <div class="card fade-in">
+                        <h3 style="color: var(--primary-blue); cursor: pointer;" onclick="toggleFAQ(5)">
+                            <i class="fas fa-question-circle"></i> Kako mogu surađivati na projektu?
+                            <i class="fas fa-chevron-down" id="faq-icon-5" style="float: right; transition: transform 0.3s;"></i>
+                        </h3>
+                        <div id="faq-content-5" style="display: none; margin-top: 1rem; color: var(--medium-gray); line-height: 1.6;">
+                            Uvijek tražimo nove suradnike! Ako ste zainteresirani za suradnju, 
+                            javite nam se putem kontakt forme ili emaila. Posebno tražimo stručnjake za medicinsku informatiku, 
+                            AI/ML specijaliste i pravnike specijalizirane za zdravstveno pravo.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-heartbeat"></i> Zdravko</h3>
+                    <p>Digitalna platforma za modernizaciju hrvatskog zdravstvenog sustava. Razvijeno na Veleučilištu u Rijeci.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Brzi linkovi</h3>
+                    <p><a href="index.html">Početna</a></p>
+                    <p><a href="usluge.html">Usluge</a></p>
+                    <p><a href="mapa.html">Ustanove</a></p>
+                    <p><a href="kontakt.html">Kontakt</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:abesic@veleri.hr">abesic@veleri.hr</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Rijeka, Hrvatska</p>
+                    <p><i class="fas fa-university"></i> Veleučilište u Rijeci</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Pratite nas</h3>
+                    <p>
+                        <a href="#" style="margin-right: 1rem;"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
+                        <a href="#" style="margin-right: 1rem;"><i class="fab fa-instagram"></i> Instagram</a><br>
+                        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zdravko. Sva prava pridržana. | Razvijeno na Veleučilištu u Rijeci</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+    
+    <!-- Accesibility Widget -->
+    <script src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js" defer></script>
+</body>
+</html>

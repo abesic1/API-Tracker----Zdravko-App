@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zdravko - digitalna platforma za modernizaciju hrvatskog zdravstvenog sustava. Vaše zdravlje, digitalno i na dlanu.">
+    <meta name="keywords" content="zdravko, zdravstvo, hrvatska, digitalno zdravstvo, e-zdravlje, aplikacija za zdravstvo">
+    <meta name="author" content="Zdravko Tim - Veleučilište u Rijeci">
+    <title>Zdravko - Vaše zdravlje, digitalno i na dlanu</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
+    
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Preskoči na sadržaj</a>
+    
+    <!-- Navigacija -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo123.png" alt="Zdravko logo" style="width: 55px; height: 50px; margin-right: 0.5rem;">
+                <span>Zdravko</span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <div class="nav-item">
+                    <a href="index.html" class="nav-link">Početna</a>
+                </div>
+                <div class="nav-item">
+                    <a href="usluge.html" class="nav-link">Usluge</a>
+                    <div class="dropdown">
+                        <a href="usluge.html#pacijenti" class="dropdown-item">Za pacijente</a>
+                        <a href="usluge.html#lijecnici" class="dropdown-item">Za liječnike</a>
+                        <a href="usluge.html#ustanove" class="dropdown-item">Za ustanove</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="mapa.html" class="nav-link">Ustanove</a>
+                </div>
+                <div class="nav-item">
+                    <a href="kontakt.html" class="nav-link">Kontakt</a>
+                </div>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main content -->
+    <main id="main-content">
+        <!-- Hero sekcija -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1 class="hero-title">Zdravko</h1>
+                <p class="hero-subtitle">Vaše zdravlje, digitalno i na dlanu</p>
+                <p style="font-size: 1.125rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.9;">
+                    Sveobuhvatna digitalna platforma koja modernizira hrvatski zdravstveni sustav. 
+                    Jednostavno naručivanje, centralizirani zdravstveni podaci i bolja komunikacija s liječnicima.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#preuzmi" class="btn btn-primary" onclick="showDownloadAlert()">
+                        <i class="fas fa-download"></i>
+                        Preuzmi aplikaciju
+                    </a>
+                    <a href="index.html" class="btn btn-secondary">
+                        <i class="fas fa-play"></i>
+                        Pogledaj demo
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Ključne funkcionalnosti -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Zašto odabrati Zdravko?</h2>
+                    <p class="section-description">
+                        Aplikacija Zdravko nudi sveobuhvatno rješenje za digitalizaciju zdravstvenih usluga u Hrvatskoj, 
+                        s fokusom na jednostavnost, sigurnost i pristupačnost za sve korisnike.
+                    </p>
+                </div>
+                
+                <div class="grid grid-3">
+                    <div class="card fade-in">
+                        <div class="card-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3 class="card-title">Digitalno naručivanje</h3>
+                        <p class="card-description">
+                            Pregled slobodnih termina i jednostavno zakazivanje pregleda u bilo koje vrijeme. 
+                            Više nikad čekanja na telefon ili gužve u ordinacijama.
+                        </p>
+                        <div class="card-footer">
+                            <a href="usluge.html#naručivanje" class="card-link">
+                                Saznaj više <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card fade-in">
+                        <div class="card-icon">
+                            <i class="fas fa-file-medical"></i>
+                        </div>
+                        <h3 class="card-title">Centralizirani podaci</h3>
+                        <p class="card-description">
+                            Pristup svim svojim nalazima, receptima, uputnicama i povijesti bolesti na jednom mjestu. 
+                            Više nikad gubitka važnih medicinskih dokumenata.
+                        </p>
+                        <div class="card-footer">
+                            <a href="usluge.html#podaci" class="card-link">
+                                Saznaj više <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card fade-in">
+                        <div class="card-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <h3 class="card-title">Pametni podsjetnici</h3>
+                        <p class="card-description">
+                            Automatski podsjetnici za termine i terapiju prilagođeni vašim potrebama. 
+                            Nikad više ne propustite važan pregled ili zaboravite uzeti lijekove.
+                        </p>
+                        <div class="card-footer">
+                            <a href="usluge.html#podsjetnici" class="card-link">
+                                Saznaj više <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Prednosti za različite korisnike -->
+        <section class="section section-light">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Tko sve koristi Zdravko?</h2>
+                    <p class="section-description">
+                        Platforma je dizajnirana za različite korisničke skupine s posebnim fokusom na njihove specifične potrebe.
+                    </p>
+                </div>
+                
+                <div class="grid grid-3">
+                    <div class="card fade-in">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #10B981, #059669);">
+                            <i class="fas fa-user-injured"></i>
+                        </div>
+                        <h3 class="card-title">Za pacijente</h3>
+                        <ul style="color: var(--medium-gray); line-height: 1.8; flex-grow: 1;">
+                            <li><i class="fas fa-check" style="color: var(--primary-green); margin-right: 0.5rem;"></i> Jednostavno naručivanje</li>
+                            <li><i class="fas fa-check" style="color: var(--primary-green); margin-right: 0.5rem;"></i> Pristup svim podacima</li>
+                            <li><i class="fas fa-check" style="color: var(--primary-green); margin-right: 0.5rem;"></i> Podsjetnici na terapiju</li>
+                            <li><i class="fas fa-check" style="color: var(--primary-green); margin-right: 0.5rem;"></i> Direktna komunikacija</li>
+                            <li><i class="fas fa-check" style="color: var(--primary-green); margin-right: 0.5rem;"></i> Besplatna usluga</li>
+                        </ul>
+                        <div class="card-footer">
+                            <a href="usluge.html#pacijenti" class="card-link">
+                                Detaljnije <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card fade-in">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #2563EB, #1D4ED8);">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h3 class="card-title">Za liječnike</h3>
+                        <ul style="color: var(--medium-gray); line-height: 1.8; flex-grow: 1;">
+                            <li><i class="fas fa-check" style="color: var(--primary-green); margin-right: 0.5rem;"></i> Efikasno upravljanje terminima</li>
+                            <li><i class="fas fa-check" style="color: var(--primary-green); margin-right: 0.5rem;"></i> Elektronički kartoni</li>
+                            <li><i class="fas fa-check" style="color: var(--primary-green); margin-right: 0.5rem;"></i> Digitalna administracija</li>
+                            <li><i class="fas fa-check" style="color: var(--primary-green); margin-right: 0.5rem;"></i> Integracija s sustavima</li>
+                            <li><i class="fas fa-check" style="color: var(--primary-green); margin-right: 0.5rem;"></i> Manje papirologije</li>
+                        </ul>
+                        <div class="card-footer">
+                            <a href="usluge.html#lijecnici" class="card-link">
+                                Detaljnije <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card fade-in">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #7C3AED, #6366F1);">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <h3 class="card-title">Za ustanove</h3>
+                        <ul style="color: var(--medium-gray); line-height: 1.8; flex-grow: 1;">
+                            <li><i class="fas fa-check" style="color: var(--primary-green); margin-right: 0.5rem;"></i> Centralizirano upravljanje</li>
+                            <li><i class="fas fa-check" style="color: var(--primary-green); margin-right: 0.5rem;"></i> Analitika i izvještavanje</li>
+                            <li><i class="fas fa-check" style="color: var(--primary-green); margin-right: 0.5rem;"></i> Optimizacija resursa</li>
+                            <li><i class="fas fa-check" style="color: var(--primary-green); margin-right: 0.5rem;"></i> Smanjenje troškova</li>
+                            <li><i class="fas fa-check" style="color: var(--primary-green); margin-right: 0.5rem;"></i> Povećanje efikasnosti</li>
+                        </ul>
+                        <div class="card-footer">
+                            <a href="usluge.html#ustanove" class="card-link">
+                                Detaljnije <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Statistika -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="fade-in">
+                        <span class="stat-number" data-target="1000000">0</span>
+                        <span class="stat-label">Potencijalnih korisnika</span>
+                    </div>
+                    <div class="fade-in">
+                        <span class="stat-number" data-target="504000">0</span>
+                        <span class="stat-label">€ Godišnje uštede</span>
+                    </div>
+                    <div class="fade-in">
+                        <span class="stat-number" data-target="15">0</span>
+                        <span class="stat-label">% Smanjenje čekanja</span>
+                    </div>
+                    <div class="fade-in">
+                        <span class="stat-number" data-target="88">0</span>
+                        <span class="stat-label">% Podrška građana</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Kako funkcionira -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Kako funkcionira Zdravko?</h2>
+                    <p class="section-description">
+                        Jednostavan proces koji svima omogućava lako korištenje platforme.
+                    </p>
+                </div>
+                
+                <div class="grid grid-2" style="align-items: center;">
+                    <div class="steps">
+                        <div class="step fade-in">
+                            <div class="step-number"></div>
+                            <div class="step-content">
+                                <h3>Registracija</h3>
+                                <p>Jednostavna registracija putem e-Građani sustava ili stvaranje novog računa s osnovnim podacima.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step fade-in">
+                            <div class="step-number"></div>
+                            <div class="step-content">
+                                <h3>Povezivanje s HZZO-om</h3>
+                                <p>Automatsko povezivanje s HZZO i CEZIH sustavom za pristup vašim zdravstvenim podacima.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step fade-in">
+                            <div class="step-number"></div>
+                            <div class="step-content">
+                                <h3>Korištenje usluga</h3>
+                                <p>Naručivanje termina, pregled dokumenata, komunikacija s liječnicima i korištenje svih funkcionalnosti.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="fade-in" style="text-align: center;">
+                        <div style="background: linear-gradient(135deg, var(--light-blue), var(--light-green)); padding: 3rem; border-radius: 20px; display: inline-block;">
+                            <i class="fas fa-mobile-alt" style="font-size: 8rem; color: var(--primary-blue);"></i>
+                            <div style="margin-top: 2rem;">
+                                <h3 style="color: var(--dark-gray); margin-bottom: 0.5rem;">Mobilna aplikacija</h3>
+                                <p style="color: var(--medium-gray);">Dostupna za iOS i Android</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- AI podrška -->
+        <section class="section section-blue">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Budućnost zdravstva s digitalnom podrškom</h2>
+                    <p class="section-description">
+                        Zdravko uvodi digitalne tehnologije za bolju i bržu organizaciju zdravstva u hrvatskoj.
+                    </p>
+                </div>
+                
+                <div class="grid grid-4">
+                    <div class="card fade-in">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #DC2626, #EF4444);">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="card-title">AI Dijagnostika</h3>
+                        <p class="card-description" style="font-size: var(--font-size-small);">
+                            Analiza medicinskih slika i nalaza za brže i preciznije prepoznavanje bolesti.
+                        </p>
+                    </div>
+                    
+                    <div class="card fade-in">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #059669, #10B981);">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <h3 class="card-title">Personalizirani planovi</h3>
+                        <p class="card-description" style="font-size: var(--font-size-small);">
+                            Individualizirane terapije i preventivne mjere temeljene na vašim podacima.
+                        </p>
+                    </div>
+                    
+                    <div class="card fade-in">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #7C3AED, #8B5CF6);">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="card-title">Prediktivna analitika</h3>
+                        <p class="card-description" style="font-size: var(--font-size-small);">
+                            Predviđanje rizika od bolesti i komplikacija za proaktivno djelovanje.
+                        </p>
+                    </div>
+                    
+                    <div class="card fade-in">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #EA580C, #F97316);">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 class="card-title">AI Chatbot</h3>
+                        <p class="card-description" style="font-size: var(--font-size-small);">
+                            Inteligentni asistent za odgovaranje na česta pitanja i podršku.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Preuzimanje aplikacije -->
+        <section class="section" id="preuzmi">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Preuzmite Zdravko aplikaciju</h2>
+                    <p class="section-description">
+                        Dostupno za sve platforme. Pridružite se digitalnoj transformaciji hrvatskog zdravstva.
+                    </p>
+                </div>
+                
+                <div class="flex-center" style="gap: 2rem; flex-wrap: wrap;">
+                    <a href="#" class="btn btn-primary" style="background: linear-gradient(135deg, #2563EB, #1D4ED8); color: white; border: none;" onclick="showDownloadAlert('iOS')">
+                        <i class="fab fa-apple"></i>
+                        Preuzmi za iPhone
+                    </a>
+                    <a href="#" class="btn btn-primary" style="background: linear-gradient(135deg, #10B981, #059669); color: white; border: none;" onclick="showDownloadAlert('Android')">
+                        <i class="fab fa-android"></i>
+                        Preuzmi za Android
+                    </a>
+                    <a href="#" class="btn btn-secondary" style="border-color: var(--primary-blue); color: var(--primary-blue);" onclick="showDownloadAlert('Web')">
+                        <i class="fas fa-globe"></i>
+                        Web aplikacija
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-heartbeat"></i> Zdravko</h3>
+                    <p>Digitalna platforma za modernizaciju hrvatskog zdravstvenog sustava. Razvijeno na Veleučilištu u Rijeci.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Brzi linkovi</h3>
+                    <p><a href="index.html">Početna</a></p>
+                    <p><a href="usluge.html">Usluge</a></p>
+                    <p><a href="mapa.html">Ustanove</a></p>
+                    <p><a href="kontakt.html">Kontakt</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:abesic@veleri.hr">abesic@veleri.hr</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Rijeka, Hrvatska</p>
+                    <p><i class="fas fa-university"></i> Veleučilište u Rijeci</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Pratite nas</h3>
+                    <p>
+                        <a href="#" style="margin-right: 1rem;"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
+                        <a href="#" style="margin-right: 1rem;"><i class="fab fa-instagram"></i> Instagram</a><br>
+                        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zdravko. Sva prava pridržana. | Razvijeno na Veleučilištu u Rijeci</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+    
+    <!-- Accesibility Widget -->
+    <script src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js" defer></script>
+</body>
+</html>

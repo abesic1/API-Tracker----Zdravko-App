@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pregled svih usluga i funkcionalnosti aplikacije Zdravko. Detaljan prikaz mogućnosti za pacijente, liječnike i zdravstvene ustanove.">
+    <meta name="keywords" content="zdravko usluge, digitalno zdravstvo, e-zdravlje funkcionalnosti, zdravstvena aplikacija">
+    <meta name="author" content="Zdravko Tim - Veleučilište u Rijeci">
+    <title>Usluge - Zdravko</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
+    
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Preskoči na sadržaj</a>
+    
+    <!-- Navigacija -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+             <img src="logo123.png" alt="Zdravko logo" style="width: 55px; height: 50px; margin-right: 0.5rem;">
+                <span>Zdravko</span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <div class="nav-item">
+                    <a href="index.html" class="nav-link">Početna</a>
+                </div>
+                <div class="nav-item">
+                    <a href="usluge.html" class="nav-link">Usluge</a>
+                    <div class="dropdown">
+                        <a href="#pacijenti" class="dropdown-item">Za pacijente</a>
+                        <a href="#lijecnici" class="dropdown-item">Za liječnike</a>
+                        <a href="#ustanove" class="dropdown-item">Za ustanove</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="mapa.html" class="nav-link">Ustanove</a>
+                </div>
+                <div class="nav-item">
+                    <a href="kontakt.html" class="nav-link">Kontakt</a>
+                </div>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main content -->
+    <main id="main-content">
+        <!-- Hero sekcija -->
+        <section class="hero" style="min-height: 40vh;">
+            <div class="container hero-content">
+                <h1 class="hero-title" style="font-size: 2.5rem;">Naše usluge</h1>
+                <p class="hero-subtitle">Sve što nudimo za modernizaciju vašeg zdravstvenog iskustva</p>
+            </div>
+        </section>
+        
+        <!-- Kategorije usluga -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Prilagođeno svim korisnicima</h2>
+                    <p class="section-description">
+                        Zdravko nudi specifične funkcionalnosti za različite korisničke skupine, 
+                        s jedinstvenom integracijom koja povezuje sve u jednoj platformi.
+                    </p>
+                </div>
+                
+                <!-- Za pacijente -->
+                <div id="pacijenti" class="mb-4">
+                    <h2 style="font-size: 2rem; color: var(--primary-green); margin-bottom: 1rem; text-align: center;">
+                        <i class="fas fa-user-injured"></i> Za pacijente
+                    </h2>
+                    <p style="text-align: center; color: var(--medium-gray); margin-bottom: 2rem;">
+                        Poboljšajte svoje zdravstveno iskustvo s alatima koji štede vrijeme i pružaju bolji uvid u vaše zdravlje.
+                    </p>
+                    
+                    <div class="grid grid-4">
+                        <div class="card fade-in" id="naručivanje">
+                            <div class="card-icon" style="background: linear-gradient(135deg, #10B981, #059669);">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <h3 class="card-title">Digitalno naručivanje</h3>
+                            <p class="card-description">
+                                Pregledajte slobodne termine i jednostavno zakazite preglede 24/7. 
+                                Više nikad čekanja na telefon ili ograničenih radnih vremena ordinacija.
+                            </p>
+              
+                        </div>
+                        
+                        <div class="card fade-in" id="podaci">
+                            <div class="card-icon" style="background: linear-gradient(135deg, #2563EB, #1D4ED8);">
+                                <i class="fas fa-file-medical"></i>
+                            </div>
+                            <h3 class="card-title">Centralizirani podaci</h3>
+                            <p class="card-description">
+                                Pristup svim nalazima, receptima, uputnicama i povijesti bolesti na jednom sigurnom mjestu. 
+                                Više nikad gubitka važnih medicinskih dokumenata.
+                            </p>
+                     
+                        </div>
+                        
+                        <div class="card fade-in" id="podsjetnici">
+                            <div class="card-icon" style="background: linear-gradient(135deg, #DC2626, #EF4444);">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                            <h3 class="card-title">Pametni podsjetnici</h3>
+                            <p class="card-description">
+                                Automatski podsjetnici za termine i terapiju prilagođeni vašim individualnim potrebama. 
+                                Nikad više ne propustite važan pregled ili zaboravite uzeti lijekove.
+                            </p>
+                     
+                        </div>
+                        
+                        <div class="card fade-in">
+                            <div class="card-icon" style="background: linear-gradient(135deg, #7C3AED, #8B5CF6);">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h3 class="card-title">Direktna komunikacija</h3>
+                            <p class="card-description">
+                                Siguran chat kanal za komunikaciju s vašim liječnikom. Postavite pitanja, 
+                                pošaljite rezultate ili zatražite savjet bez potrebe za fizičkim dolaskom.
+                            </p>
+                     
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Za liječnike -->
+                <div id="lijecnici" class="mb-4">
+                    <h2 style="font-size: 2rem; color: var(--primary-blue); margin-bottom: 1rem; text-align: center; margin-top: 4rem;">
+                        <i class="fas fa-user-md"></i> Za liječnike
+                    </h2>
+                    <p style="text-align: center; color: var(--medium-gray); margin-bottom: 2rem;">
+                        Otpustite vrijeme za ono što je najvažnije - vaše pacijente. Smanjite administraciju i povećajte efikasnost.
+                    </p>
+                    
+                    <div class="grid grid-4">
+                        <div class="card fade-in">
+                            <div class="card-icon" style="background: linear-gradient(135deg, #2563EB, #1D4ED8);">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <h3 class="card-title">Upravljanje terminima</h3>
+                            <p class="card-description">
+                                Pregled i upravljanje rasporedom termina na jednom mjestu. Automatska potvrda, 
+                                otkazivanje i prebacivanje termina s minimalnim naporom.
+                            </p>
+
+                        </div>
+                        
+                        <div class="card fade-in">
+                            <div class="card-icon" style="background: linear-gradient(135deg, #059669, #10B981);">
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <h3 class="card-title">Elektronički kartoni</h3>
+                            <p class="card-description">
+                                Digitalno vođenje medicinskih kartona pacijenata s potpunom poviješću bolesti, 
+                                alergijama i trenutnom terapijom. Brz pristup svim potrebnim informacijama.
+                            </p>
+
+                        </div>
+                        
+                        <div class="card fade-in">
+                            <div class="card-icon" style="background: linear-gradient(135deg, #DC2626, #EF4444);">
+                                <i class="fas fa-file-signature"></i>
+                            </div>
+                            <h3 class="card-title">Digitalna administracija</h3>
+                            <p class="card-description">
+                                Elektroničko izdavanje recepata, uputnica i ispričnica. Potpisivanje dokumenata 
+                                digitalno s punom pravnom valjanosti.
+                            </p>
+                         
+                        </div>
+                        
+                        <div class="card fade-in">
+                            <div class="card-icon" style="background: linear-gradient(135deg, #7C3AED, #8B5CF6);">
+                                <i class="fas fa-plug"></i>
+                            </div>
+                            <h3 class="card-title">Integracija s sustavima</h3>
+                            <p class="card-description">
+                                Povezanost s CEZIH, HZZO i e-Građani sustavom za automatizirani prijenos podataka 
+                                i izbjegavanje duplog unosa.
+                            </p>
+                    
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Za ustanove -->
+                <div id="ustanove" class="mb-4">
+                    <h2 style="font-size: 2rem; color: #7C3AED; margin-bottom: 1rem; text-align: center; margin-top: 4rem;">
+                        <i class="fas fa-hospital"></i> Za ustanove
+                    </h2>
+                    <p style="text-align: center; color: var(--medium-gray); margin-bottom: 2rem;">
+                        Transformirajte svoju ustanovu digitalno. Povećajte efikasnost, smanjite troškove i poboljšajte kvalitetu usluga.
+                    </p>
+                    
+                    <div class="grid grid-4">
+                        <div class="card fade-in">
+                            <div class="card-icon" style="background: linear-gradient(135deg, #7C3AED, #6366F1);">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h3 class="card-title">Analitika i izvještavanje</h3>
+                            <p class="card-description">
+                                Detaljna analitika rada ustanove, statistike pacijenata, iskorištenosti resursa 
+                                i ključnih pokazatelja uspješnosti.
+                            </p>
+                           
+                        </div>
+                        
+                        <div class="card fade-in">
+                            <div class="card-icon" style="background: linear-gradient(135deg, #EA580C, #F97316);">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h3 class="card-title">Optimizacija resursa</h3>
+                            <p class="card-description">
+                                Inteligentno upravljanje kapacitetima, smanjenje propuštenih termina i bolja 
+                                organizacija radnog vremena osoblja.
+                            </p>
+                          
+                        </div>
+                        
+                        <div class="card fade-in">
+                            <div class="card-icon" style="background: linear-gradient(135deg, #DC2626, #EF4444);">
+                                <i class="fas fa-euro-sign"></i>
+                            </div>
+                            <h3 class="card-title">Smanjenje troškova</h3>
+                            <p class="card-description">
+                                Značajno smanjenje troškova papira, administracije i neefikasnosti. 
+                                Procijenjena godišnja ušteda do 504.000 € za cijeli sustav.
+                            </p>
+                          
+                        </div>
+                        
+                        <div class="card fade-in">
+                            <div class="card-icon" style="background: linear-gradient(135deg, #059669, #10B981);">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3 class="card-title">Upravljanje osobljem</h3>
+                            <p class="card-description">
+                                Centralizirano upravljanje rasporedom liječnika i medicinskog osoblja, 
+                                praćenje radnih sati i efikasnosti.
+                            </p>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Specijalne funkcionalnosti -->
+        <section class="section section-light">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Specijalne funkcionalnosti</h2>
+                    <p class="section-description">
+                        Dodatne značajke koje čine Zdravko jedinstvenim na tržištu digitalnog zdravstva.
+                    </p>
+                </div>
+                
+                <div class="grid grid-3">
+                    <div class="card fade-in">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #DC2626, #EF4444);">
+                            <i class="fas fa-universal-access"></i>
+                        </div>
+                        <h3 class="card-title">Pristupačnost</h3>
+                        <p class="card-description">
+                            Prilagođeno za osobe s poteškoćama vida, sluha i kretanja. 
+                            Funkcionalnosti poput glasovnih naredbi, povećanih fontova i kontrastnih načina prikaza.
+                        </p>
+                    </div>
+                    
+                    <div class="card fade-in">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #7C3AED, #8B5CF6);">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="card-title">Višejezičnost</h3>
+                        <p class="card-description">
+                            Podrška za hrvatski, engleski i druge jezike. Posebno korisno za turiste 
+                            i strane državljane koji borave u Hrvatskoj.
+                        </p>
+                    </div>
+                    
+                    <div class="card fade-in">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #059669, #10B981);">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="card-title">Sigurnost</h3>
+                        <p class="card-description">
+                            Najviši standardi zaštite podataka u skladu s GDPR-om. Dvofaktorska autentifikacija, 
+                            enkripcija i sigurnosne kopije.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Usporedba s konkurencijom -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Zašto je Zdravko bolji?</h2>
+                    <p class="section-description">
+                        Usporedba s postojećim rješenjima na hrvatskom tržištu digitalnog zdravstva.
+                    </p>
+                </div>
+                
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md);">
+                        <thead style="background: linear-gradient(135deg, var(--primary-blue), var(--primary-green)); color: white;">
+                            <tr>
+                                <th style="padding: 1rem; text-align: left;">Značajka</th>
+                                <th style="padding: 1rem; text-align: center;">Zdravko</th>
+                                <th style="padding: 1rem; text-align: center;">Portal Zdravlja</th>
+                                <th style="padding: 1rem; text-align: center;">Sdoktor</th>
+                                <th style="padding: 1rem; text-align: center;">Medicus.Net</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #E5E7EB;">
+                                <td style="padding: 1rem; font-weight: 600;">Integracija s državnim sustavima</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--primary-green);"><i class="fas fa-check-circle"></i> Potpuna</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--medium-gray);"><i class="fas fa-minus-circle"></i> Djelomična</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--medium-gray);"><i class="fas fa-times-circle"></i> Ograničena</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--medium-gray);"><i class="fas fa-times-circle"></i> Ograničena</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #E5E7EB;">
+                                <td style="padding: 1rem; font-weight: 600;">Centralizirani pristup podacima</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--primary-green);"><i class="fas fa-check-circle"></i> Da</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--primary-green);"><i class="fas fa-check-circle"></i> Da</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--medium-gray);"><i class="fas fa-minus-circle"></i> Ograničeno</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--medium-gray);"><i class="fas fa-minus-circle"></i> Ograničeno</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #E5E7EB;">
+                                <td style="padding: 1rem; font-weight: 600;">AI podrška</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--primary-green);"><i class="fas fa-check-circle"></i> Planirano</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--medium-gray);"><i class="fas fa-times-circle"></i> Ne</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--medium-gray);"><i class="fas fa-times-circle"></i> Ne</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--medium-gray);"><i class="fas fa-times-circle"></i> Ne</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #E5E7EB;">
+                                <td style="padding: 1rem; font-weight: 600;">Cijena za korisnike</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--primary-green);"><i class="fas fa-check-circle"></i> Besplatno</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--primary-green);"><i class="fas fa-check-circle"></i> Besplatno</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--medium-gray);"><i class="fas fa-euro-sign"></i> Plaćanje</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--medium-gray);"><i class="fas fa-euro-sign"></i> Plaćanje</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #E5E7EB;">
+                                <td style="padding: 1rem; font-weight: 600;">Pristupačnost</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--primary-green);"><i class="fas fa-check-circle"></i> Da</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--medium-gray);"><i class="fas fa-minus-circle"></i> Djelomično</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--medium-gray);"><i class="fas fa-times-circle"></i> Ograničeno</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--medium-gray);"><i class="fas fa-times-circle"></i> Ograničeno</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1rem; font-weight: 600;">Višejezičnost</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--primary-green);"><i class="fas fa-check-circle"></i> Da</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--medium-gray);"><i class="fas fa-times-circle"></i> Ne</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--medium-gray);"><i class="fas fa-minus-circle"></i> Ograničeno</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--medium-gray);"><i class="fas fa-minus-circle"></i> Ograničeno</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-heartbeat"></i> Zdravko</h3>
+                    <p>Digitalna platforma za modernizaciju hrvatskog zdravstvenog sustava. Razvijeno na Veleučilištu u Rijeci.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Brzi linkovi</h3>
+                    <p><a href="index.html">Početna</a></p>
+                    <p><a href="usluge.html">Usluge</a></p>
+                    <p><a href="mapa.html">Ustanove</a></p>
+                    <p><a href="kontakt.html">Kontakt</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:abesic@veleri.hr">abesic@veleri.hr</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Rijeka, Hrvatska</p>
+                    <p><i class="fas fa-university"></i> Veleučilište u Rijeci</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Pratite nas</h3>
+                    <p>
+                        <a href="#" style="margin-right: 1rem;"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
+                        <a href="#" style="margin-right: 1rem;"><i class="fab fa-instagram"></i> Instagram</a><br>
+                        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zdravko. Sva prava pridržana. | Razvijeno na Veleučilištu u Rijeci</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+        
+    <!-- Accesibility Widget -->
+    <script src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js" defer></script>
+</body>
+</html>
